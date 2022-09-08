@@ -27,4 +27,15 @@ class Strings {
   String txtSignUp = 'Register';
   String txtHaveAccount = 'Sudah punya akun ? ';
   String txtSignInNow = 'Login sekarang';
+
+  //ProfileDrawer
+  String nameProfile1 = 'Angga ';
+  String nameProfile2 = 'Praja';
+  String roleProfile = 'Membership BBLK';
+  String myProfile = 'Profile Saya';
+  String settingsProfile = 'Pengaturan';
+  String signOut = 'Logout';
+  String footerProfile = 'Ikuti kami di';
+  String footerProfileFAQ = 'FAQ';
+  String footerProfileTnC = 'Terms and Condition';
 }

@@ -5,4 +5,5 @@ class AppColors {
   Color secColor = const Color(0xff597393);
   Color textGrey = const Color(0xffBEBEBE);
   Color transparan = const Color(0x00ffffff);
+  Color logoutButton = const Color(0xffEB0004);
 }

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:ui_aplikasi/constant/c.dart';
+import 'package:ui_aplikasi/view/home_page.dart';
 import 'package:ui_aplikasi/view/signup_page.dart';
-import 'package:ui_aplikasi/widgets/footer2_auth.dart';
-import 'package:ui_aplikasi/widgets/textfieldWidget.dart';
+import 'package:ui_aplikasi/widgets/footer2_auth_widget.dart';
+import 'package:ui_aplikasi/widgets/text_field_widget.dart';
 
 import '../widgets/auth_button_widget.dart';
-import '../widgets/footer_auth.dart';
-import '../widgets/titleTextFieldWidget.dart';
+import '../widgets/footer_auth_widget.dart';
+import '../widgets/title_text_field_widget.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -132,7 +133,10 @@ class _SignInPageState extends State<SignInPage> {
               const SizedBox(
                 height: 40,
               ),
-              AuthButton(text: C.strings.txtLogin),
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(context, HomePage.route),
+                child: AuthButton(text: C.strings.txtLogin),
+              ),
               GestureDetector(
                 onTap: () => Navigator.pushNamed(context, SignUpPage.route),
                 child: FooterAuth(

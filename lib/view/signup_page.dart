@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ui_aplikasi/view/signin_page.dart';
 import 'package:ui_aplikasi/widgets/auth_button_widget.dart';
-import 'package:ui_aplikasi/widgets/footer2_auth.dart';
-import 'package:ui_aplikasi/widgets/footer_auth.dart';
-import 'package:ui_aplikasi/widgets/textfieldWidget.dart';
+import 'package:ui_aplikasi/widgets/footer2_auth_widget.dart';
+import 'package:ui_aplikasi/widgets/footer_auth_widget.dart';
+import 'package:ui_aplikasi/widgets/text_field_widget.dart';
 
 import '../constant/c.dart';
-import '../widgets/titleTextFieldWidget.dart';
+import '../widgets/title_text_field_widget.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);

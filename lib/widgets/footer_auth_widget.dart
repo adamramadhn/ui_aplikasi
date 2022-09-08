@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_aplikasi/widgets/textStyle.dart';
+import 'package:ui_aplikasi/widgets/text_app_widget.dart';
 
 import '../constant/c.dart';
 

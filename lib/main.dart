@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_aplikasi/view/home_page.dart';
 import 'package:ui_aplikasi/view/signin_page.dart';
 
 import 'view/signup_page.dart';
@@ -19,12 +20,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Gilroy-ExtraBold',
+        appBarTheme: const AppBarTheme(
+          color: Colors.white,
+          centerTitle: true,
+          elevation: 0,
+          // titleTextStyle: TextStyle(
+          //     color: Colors.black, fontWeight: FontWeight.bold, fontSize: 24),
+        ),
       ),
       initialRoute: SignInPage.route,
       home: const SignInPage(),
       routes: {
         SignInPage.route: (context) => const SignInPage(),
         SignUpPage.route: (context) => const SignUpPage(),
+        HomePage.route: (context) => const HomePage(),
       },
     );
   }
