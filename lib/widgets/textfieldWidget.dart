@@ -21,7 +21,7 @@ class TextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -30,9 +30,15 @@ class TextFieldWidget extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
-              border: Border.all(color: C.color.secColor),
+              border: Border.all(color: C.color.transparan),
             ),
             child: TextFormField(
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'field must be filled!';
+                }
+                return null;
+              },
               keyboardType: keyboard,
               enabled: enable,
               controller: controller,

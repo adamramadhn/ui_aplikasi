@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:ui_aplikasi/constant/c.dart';
-import 'package:ui_aplikasi/widgets/textStyle.dart';
+import 'package:ui_aplikasi/view/signup_page.dart';
+import 'package:ui_aplikasi/widgets/footer2_auth.dart';
 import 'package:ui_aplikasi/widgets/textfieldWidget.dart';
 
+import '../widgets/auth_button_widget.dart';
+import '../widgets/footer_auth.dart';
 import '../widgets/titleTextFieldWidget.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
-
+class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
+  static String route = "signin_page";
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignInPageState extends State<SignInPage> {
   late TextEditingController txtemail;
   late TextEditingController txtpassword;
   final formLogin = GlobalKey<FormState>();
@@ -86,9 +89,6 @@ class _LoginPageState extends State<LoginPage> {
                 fontSize: 16,
                 color: C.color.primaryColor,
               ),
-              const SizedBox(
-                height: 16,
-              ),
               TextFieldWidget(
                   hintText: C.strings.txtEmailHint, controller: txtemail),
               const SizedBox(
@@ -111,9 +111,6 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 16,
-              ),
               TextFieldWidget(
                 hintText: C.strings.txtPasswordHint,
                 controller: txtpassword,
@@ -135,82 +132,14 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 40,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Container(
-                  height: 48,
-                  decoration: BoxDecoration(
-                    color: C.color.primaryColor,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Stack(
-                    children: [
-                      Center(
-                        child: Text(
-                          C.strings.txtLogin,
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 16),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 17),
-                        child: Center(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: const [
-                              Icon(
-                                Icons.arrow_forward,
-                                color: Colors.white,
-                              ),
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+              AuthButton(text: C.strings.txtLogin),
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(context, SignUpPage.route),
+                child: FooterAuth(
+                    text1: C.strings.txtUnregistered,
+                    text2: C.strings.txtSignUpNow),
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 70, vertical: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    TextAppWidget(
-                        text: C.strings.txtUnregistered,
-                        color: C.color.textGrey,
-                        isWeight: false,
-                        size: 14),
-                    TextAppWidget(
-                        text: C.strings.txtDaftar,
-                        color: C.color.primaryColor,
-                        isWeight: false,
-                        size: 14),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 41),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 9),
-                      child: Image.asset(C.assets.logoC),
-                    ),
-                    TextAppWidget(
-                        text: C.strings.txtSilk,
-                        color: C.color.textGrey,
-                        isWeight: true,
-                        size: 12),
-                    TextAppWidget(
-                        text: C.strings.txtSilk2,
-                        color: C.color.textGrey,
-                        isWeight: false,
-                        size: 12),
-                  ],
-                ),
-              ),
+              const Footer2()
             ],
           ),
         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ui_aplikasi/view/login_page.dart';
+import 'package:ui_aplikasi/view/signin_page.dart';
+
+import 'view/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Gilroy-ExtraBold',
       ),
-      home: const LoginPage(),
+      initialRoute: SignInPage.route,
+      home: const SignInPage(),
+      routes: {
+        SignInPage.route: (context) => const SignInPage(),
+        SignUpPage.route: (context) => const SignUpPage(),
+      },
     );
   }
 }
