@@ -1,6 +1,6 @@
 # ui_aplikasi
 
-A new Flutter project.
+Apliaksi => [Link Download Apk](https://drive.google.com/file/d/1kFQVgUFsBbCxhkhrnDN_3YJK9i1uoJwe/view?usp=sharing)
 
 ## Getting Started
 
