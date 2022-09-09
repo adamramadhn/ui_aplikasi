@@ -10,7 +10,8 @@ class TextFieldWidget extends StatelessWidget {
       this.enable = true,
       this.keyboard,
       this.isObsecure,
-      this.visiblePassword})
+      this.visiblePassword,
+      this.isShadow})
       : super(key: key);
   final String hintText;
   final TextEditingController controller;
@@ -18,6 +19,7 @@ class TextFieldWidget extends StatelessWidget {
   final TextInputType? keyboard;
   final bool? isObsecure;
   final IconButton? visiblePassword;
+  final String? isShadow;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -28,6 +30,15 @@ class TextFieldWidget extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(left: 24),
             decoration: BoxDecoration(
+              boxShadow: [
+                isShadow == 'y'
+                    ? BoxShadow(
+                        color: Colors.grey.withOpacity(0.2),
+                        blurRadius: 7,
+                        offset: const Offset(3, 6),
+                      )
+                    : const BoxShadow()
+              ],
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
               border: Border.all(color: C.color.transparan),

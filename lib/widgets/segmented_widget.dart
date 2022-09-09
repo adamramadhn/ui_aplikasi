@@ -6,7 +6,9 @@ class SegmentedWidget extends StatefulWidget {
       {Key? key,
       required this.values,
       required this.initialPosition,
-      required this.onSelected, required this.colorBack, required this.colorTextSelected})
+      required this.onSelected,
+      required this.colorBack,
+      required this.colorTextSelected})
       : super(key: key);
   final List<String> values;
   final int initialPosition;
@@ -43,8 +45,7 @@ class _SegmentedWidgetState extends State<SegmentedWidget> {
               padding: const EdgeInsets.symmetric(horizontal: 25),
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(30)),
-                color:
-                    index == current ? widget.colorBack : C.color.textWhite,
+                color: index == current ? widget.colorBack : C.color.textWhite,
               ),
               child: Center(
                 child: Text(
@@ -61,34 +62,29 @@ class _SegmentedWidgetState extends State<SegmentedWidget> {
         },
       ),
     );
+  }
+}
 
-    //   widget.isSelected
-    //       ? Container(
-    //           decoration: BoxDecoration(
-    //             borderRadius: BorderRadius.circular(30),
-    //             color: C.color.primaryColor,
-    //           ),
-    //           child: Padding(
-    //             padding: const EdgeInsets.symmetric(horizontal: 25),
-    //             child: Center(
-    //               child: TextAppWidget(
-    //                   text: widget.text,
-    //                   color: C.color.textWhite,
-    //                   isWeight: true,
-    //                   size: 12),
-    //             ),
-    //           ),
-    //         )
-    //       : Padding(
-    //           padding: const EdgeInsets.symmetric(horizontal: 25),
-    //           child: Center(
-    //             child: TextAppWidget(
-    //                 text: widget.text,
-    //                 color: C.color.textWhite,
-    //                 isWeight: true,
-    //                 size: 12),
-    //           ),
-    //         ),
-    // );
+class SegmentedWidgetCustom extends StatelessWidget {
+  const SegmentedWidgetCustom({Key? key, required this.isPressed})
+      : super(key: key);
+  final String isPressed;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Container(
+        height: 30,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: C.color.segColor,
+        ),
+        child: Center(
+          child: Text(C.strings.myProfile),
+        ),
+      ),
+    );
   }
 }

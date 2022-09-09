@@ -4,9 +4,12 @@ import '../constant/c.dart';
 
 class AuthButton extends StatelessWidget {
   const AuthButton({
-    Key? key, required this.text,
+    Key? key,
+    required this.text,
+    this.iconCustom,
   }) : super(key: key);
   final String text;
+  final IconData? iconCustom;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +26,7 @@ class AuthButton extends StatelessWidget {
             Center(
               child: Text(
                 text,
-                style: const TextStyle(color: Colors.white, fontSize: 16),
+                style: TextStyle(color: C.color.textWhite, fontSize: 16),
               ),
             ),
             Padding(
@@ -31,11 +34,16 @@ class AuthButton extends StatelessWidget {
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
-                    Icon(
-                      Icons.arrow_forward,
-                      color: Colors.white,
-                    ),
+                  children: [
+                    iconCustom == null
+                        ? Icon(
+                            Icons.arrow_forward,
+                            color: C.color.textWhite,
+                          )
+                        : Icon(
+                            iconCustom,
+                            color: C.color.textWhite,
+                          ),
                   ],
                 ),
               ),

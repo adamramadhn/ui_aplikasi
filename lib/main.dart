@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_aplikasi/view/home_page.dart';
-import 'package:ui_aplikasi/view/home_page2.dart';
+import 'package:ui_aplikasi/view/profile_page.dart';
 import 'package:ui_aplikasi/view/signin_page.dart';
 
 import 'view/signup_page.dart';
@@ -25,8 +25,6 @@ class MyApp extends StatelessWidget {
           color: Colors.white,
           centerTitle: true,
           elevation: 0,
-          // titleTextStyle: TextStyle(
-          //     color: Colors.black, fontWeight: FontWeight.bold, fontSize: 24),
         ),
       ),
       initialRoute: SignInPage.route,
@@ -35,8 +33,7 @@ class MyApp extends StatelessWidget {
         SignInPage.route: (context) => const SignInPage(),
         SignUpPage.route: (context) => const SignUpPage(),
         HomePage.route: (context) => const HomePage(),
-        HomePage.route: (context) => const HomePage(),
-        HomePage2.route: (context) => const HomePage2(),
+        ProfilePage.route: (context) => const ProfilePage(),
       },
     );
   }

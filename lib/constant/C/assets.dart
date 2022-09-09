@@ -11,6 +11,8 @@ class Assets {
   String icon3 = 'assets/image/icon3.svg';
   String iconBuilding = 'assets/image/iconBuilding.png';
   String iconLoc = 'assets/image/iconLoc.png';
+  String iconPerson = 'assets/image/iconPerson.png';
+  String iconInform = 'assets/image/iconInformation.png';
   String imgGrid = 'assets/image/imgTelescope.png';
 
   String imgGedung1 = 'assets/image/imgGedung1.png';

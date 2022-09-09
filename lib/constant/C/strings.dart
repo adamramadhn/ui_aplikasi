@@ -80,4 +80,13 @@ class Strings {
   //footerHome
   String footerHome1 = 'Ingin mendapat update dari kami ?';
   String footerHome2 = 'Dapatkan notifikasi';
+
+  //profilePage
+  String textProfile2 =
+      'Lengkapi profile anda untuk memaksimalkan penggunaan aplikasi';
+  String profileTextT1 = 'Pilih data yang ingin ditampilkan';
+  String profileTextDataDiri = 'Data Diri';
+  String profileTextDataDiri2 = 'Data diri anda sesuai KTP';
+  String profileTextInform = 'Pastikan profile anda terisi dengan benar, data pribadi anda terjamin keamanannya';
+  String profileTextButton = 'Simpan Profile';
 }

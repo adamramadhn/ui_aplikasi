@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_aplikasi/constant/c.dart';
 import 'package:ui_aplikasi/view/home_page.dart';
-import 'package:ui_aplikasi/view/home_page2.dart';
 import 'package:ui_aplikasi/view/signup_page.dart';
 import 'package:ui_aplikasi/widgets/footer2_auth_widget.dart';
 import 'package:ui_aplikasi/widgets/text_field_widget.dart';
@@ -135,7 +134,7 @@ class _SignInPageState extends State<SignInPage> {
                 height: 40,
               ),
               GestureDetector(
-                onTap: () => Navigator.pushNamed(context, HomePage2.route),
+                onTap: () => Navigator.pushNamed(context, HomePage.route),
                 child: AuthButton(text: C.strings.txtLogin),
               ),
               GestureDetector(
