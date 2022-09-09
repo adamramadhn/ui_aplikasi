@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_aplikasi/view/home_page.dart';
+import 'package:ui_aplikasi/view/home_page2.dart';
 import 'package:ui_aplikasi/view/signin_page.dart';
 
 import 'view/signup_page.dart';
@@ -34,6 +35,8 @@ class MyApp extends StatelessWidget {
         SignInPage.route: (context) => const SignInPage(),
         SignUpPage.route: (context) => const SignUpPage(),
         HomePage.route: (context) => const HomePage(),
+        HomePage.route: (context) => const HomePage(),
+        HomePage2.route: (context) => const HomePage2(),
       },
     );
   }
