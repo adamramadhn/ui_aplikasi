@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ui_aplikasi/view/home_page.dart';
 import 'package:ui_aplikasi/view/profile_page.dart';
 import 'package:ui_aplikasi/view/signin_page.dart';
@@ -6,6 +7,8 @@ import 'package:ui_aplikasi/view/signin_page.dart';
 import 'view/signup_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
