@@ -29,9 +29,9 @@ class Strings {
   String txtSignInNow = 'Login sekarang';
 
   //ProfileDrawer
-  String nameProfile1 = 'Angga ';
-  String nameProfile2 = 'Praja';
-  String roleProfile = 'Membership BBLK';
+  String nameProfile1 = 'Adam ';
+  String nameProfile2 = 'Ramadhan';
+  String roleProfile = 'Membership';
   String myProfile = 'Profile Saya';
   String settingsProfile = 'Pengaturan';
   String signOut = 'Logout';
@@ -87,6 +87,7 @@ class Strings {
   String profileTextT1 = 'Pilih data yang ingin ditampilkan';
   String profileTextDataDiri = 'Data Diri';
   String profileTextDataDiri2 = 'Data diri anda sesuai KTP';
-  String profileTextInform = 'Pastikan profile anda terisi dengan benar, data pribadi anda terjamin keamanannya';
+  String profileTextInform =
+      'Pastikan profile anda terisi dengan benar, data pribadi anda terjamin keamanannya';
   String profileTextButton = 'Simpan Profile';
 }
